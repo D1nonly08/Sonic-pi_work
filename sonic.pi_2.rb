@@ -11,7 +11,7 @@ end
 sleep 2
 sample intro, amp: 2.5
 
-sleep 38
+sleep 39.7
 
 sample :ambi_haunted_hum, amp: 2, beat_stretch: 3
 sleep 3
@@ -25,19 +25,21 @@ live_loop :background do
   sleep 3
 end
 
-sleep 10.5
+sleep 11.5
+
+live_loop :drums do
+  sample :drum_cymbal_hard, amp: 1.2
+  sleep 0.32
+  sample :drum_bass_hard, amp: 1.2
+  sleep 0.32
+end
+
+sleep 4
 
 live_loop :tuff do
   use_synth :prophet
   play 60, amp: 1
   sleep 0.32
   play 70, amp: 1
-  sleep 0.32
-end
-
-live_loop :drums do
-  sample :drum_cymbal_hard, amp: 1.2
-  sleep 0.32
-  sample :drum_bass_hard, amp: 1.2
   sleep 0.32
 end
